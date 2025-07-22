@@ -1,0 +1,47 @@
+
+    
+
+    <!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.pooshine.19.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+  <header>
+    <div class="top-banner">خوش آمدید</div>
+    <h1 class="title">فروشگاه سیسمونی Pooshine</h1>
+  </header>
+
+  <main>
+    <div class="product-list" id="product-list">
+      <!-- محصولات اینجا نمایش داده می‌شن -->
+	  
+    </div>
+  </main>
+
+  <footer>
+    <p>pooshine.19</p>
+  </footer>
+<input tipe="text id="searchlnput"
+placehilder="جستجوی محصول..."style="margin:20px;padding:10px;width:80%;"
+onkeyup="serchproducts()"/>
+  <script src="script.js"></script>
+</body>
+<button onclick="goToAdmin()">ورود به پنل مدیریت</button>
+
+<script>
+  function goToAdmin() {
+    var password = prompt("رمز عبور را وارد کنید:");
+    if (password === "1234") { // 🔐 این‌جا رمزتو می‌نویسی
+      window.location.href = "admin.html";
+    } else {
+      alert("رمز اشتباه است!");
+    }
+  }
+</script>
+<section 
+</html>

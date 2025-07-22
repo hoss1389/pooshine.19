@@ -1,0 +1,49 @@
+
+}body {
+  font-family: sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+}
+
+.top-banner {
+  background: pink;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.out-of-stock {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #eee;
+}

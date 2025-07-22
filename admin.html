@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>مدیریت محصولات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 style="text-align:center;">ورود به پنل مدیریت</h2>
+  <div id="login" style="text-align:center;">
+    <input id="password" type="password" placeholder="رمز را وارد کنید">
+    <button onclick="checkPass()">ورود</button>
+  </div>
+
+  <div id="panel" style="display:none; text-align:center;">
+    <h3>افزودن محصول</h3>
+    <input id="name" placeholder="نام محصول"><br><br>
+    <input id="image" placeholder="لینک عکس محصول"><br><br>
+    <input id="price" placeholder="قیمت"><br><br>
+    <input id="link" placeholder="لینک پرداخت دیجی‌پی"><br><br>
+    <label><input id="stock" type="checkbox" checked> موجود</label><br><br>
+    <button onclick="addProduct()">ثبت</button>
+  </div>
+
+  <script>
+    function checkPass() {
+      const pass = document.getElementById('password').value;
+      if (pass === '1234') {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('panel').style.display = 'block';
+      } else {
+        alert('رمز اشتباهه!');
+      }
+    }
+
+    function addProduct() {
+      const name = document.getElementById('name').value;
+      const image = document.getElementById('image').value;
+      const price = document.getElementById('price').value;
+      const link = document.getElementById('link').value;
+      const stock = document.getElementById('stock').checked;
+
+      const product = { name, image, price, link, stock };
+
+      const products = JSON.parse(localStorage.getItem("products")) || [];
+      products.push(product);
+      localStorage.setItem("products", JSON.stringify(products));
+      alert("محصول ثبت شد ✅");
+    }
+  </script>
+</body>
+<section id="admin-panel">
+  <h2>افزودن محصول جدید</h2>
+  <form id="addProductForm">
+    <input type="text" id="productName" placeholder="نام محصول" required>
+    <input type="text" id="productPrice" placeholder="قیمت محصول" required>
+    <input type="text" id="productImage" placeholder="لینک عکس محصول" required>
+    <button type="submit">افزودن محصول</button>
+  </form>
+</section>
+</html>
