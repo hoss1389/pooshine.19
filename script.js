@@ -1,3 +1,5 @@
+let total = 0;
+
 document.getElementById("addProductForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -18,6 +20,15 @@ document.getElementById("addProductForm").addEventListener("submit", function (e
 
   productList.appendChild(newProduct);
 
-  // پاک کردن فرم بعد از ثبت
   document.getElementById("addProductForm").reset();
+});
+
+// جمع قیمت‌ها در سبد خرید
+document.querySelector(".product-list").addEventListener("click", function (e) {
+  if (e.target.tagName === "BUTTON") {
+    const priceText = e.target.previousElementSibling.textContent;
+    const price = parseInt(priceText.replace(/\D/g, ""));
+    total += price;
+    document.getElementById("total-price").textContent = `مجموع کل: ${total.toLocaleString()} تومان`;
+  }
 });

@@ -1,49 +1,76 @@
-
-    
-
-    <!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>www.pooshine.19.com</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8"/>
-  <meta name=width=device-width,intial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
+  <title>فروشگاه پوشینه</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #ffccdd;
+      padding: 15px;
+      text-align: center;
+      border-radius: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .contact, .support {
+      background-color: #fff;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .contact h2, .support h2 {
+      margin-top: 0;
+      color: #e60073;
+    }
+
+    a.phone {
+      display: block;
+      font-size: 18px;
+      color: #0077cc;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    a.phone:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body> 
+<body>
+
   <header>
-    <div class="top-banner">خوش آمدید</div>
-    <h1 class="title">فروشگاه سیسمونی Pooshine</h1>
+    <h1>به فروشگاه سیسمونی پوشینه خوش آمدید</h1>
   </header>
 
-  <main>
-    <div class="product-list" id="product-list">
-      <!-- محصولات اینجا نمایش داده می‌شن -->
-	  
-    </div>
-  </main>
+  <div class="contact">
+    <h2>📞 با ما در ارتباط باشید</h2>
+    <a class="phone" href="tel:02166404387">۰۲۱-۶۶۴۰۴۳۸۷</a>
+    <a class="phone" href="tel:02166967241">۰۲۱-۶۶۹۶۷۲۴۱</a>
+  </div>
+
+  <div class="support">
+    <h2>💬 پشتیبانی واتساپ / تلفنی</h2>
+    <a class="phone" href="tel:09981304389">۰۹۹۸۱۳۰۴۳۸۹</a>
+    <a class="phone" href="https://wa.me/989981304389" target="_blank">پیام در واتساپ</a>
+  </div>
 
   <footer>
-    <p>pooshine.19</p>
+    <p>تمامی حقوق برای فروشگاه پوشینه محفوظ است.</p>
   </footer>
-<input tipe="text id="searchlnput"
-placehilder="جستجوی محصول..."style="margin:20px;padding:10px;width:80%;"
-onkeyup="serchproducts()"/>
-  <script src="script.js"></script>
-</body>
-<button onclick="goToAdmin()">ورود به پنل مدیریت</button>
 
-<script>
-  function goToAdmin() {
-    var password = prompt("رمز عبور را وارد کنید:");
-    if (password === "1234") { // 🔐 این‌جا رمزتو می‌نویسی
-      window.location.href = "admin.html";
-    } else {
-      alert("رمز اشتباه است!");
-    }
-  }
-</script>
-<section 
+</body>
 </html>
